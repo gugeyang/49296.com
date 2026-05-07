@@ -5,7 +5,7 @@ theme = "ai-tech-theme"
 timeZone = "Asia/Shanghai"
 pagination.pagerSize = 6
 summaryLength = 15
-googleAnalytics = "G-TR54E8087D"
+googleAnalytics = "G-MBS8YFS3BN"
 disableLanguages = ["fr"]
 hasCJKLanguage = false
 
