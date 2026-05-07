@@ -1,0 +1,44 @@
+{
+  "name": "Gmail Attachments to Google Drive",
+  "version": "1.0",
+  "platform": "Make.com",
+  "description": "Automatically saves Gmail email attachments to a specified Google Drive folder. Includes email filtering, attachment iteration, and file upload with duplicate handling.",
+  "modules": [
+    {
+      "id": 1,
+      "type": "gmail:WatchEmails",
+      "label": "Watch Gmail for New Emails with Attachments",
+      "config": {
+        "folder": "INBOX",
+        "searchCriteria": "has:attachment",
+        "markAsRead": true,
+        "limit": 10
+      }
+    },
+    {
+      "id": 2,
+      "type": "tools:Iterator",
+      "label": "Iterate Email Attachments",
+      "config": {
+        "array": "{{1.Attachments}}"
+      }
+    },
+    {
+      "id": 3,
+      "type": "google-drive:UploadFile",
+      "label": "Upload Attachment to Google Drive",
+      "config": {
+        "folderId": "YOUR_GOOGLE_DRIVE_FOLDER_ID",
+        "fileName": "{{2.Name}}",
+        "data": "{{2.Data}}",
+        "mimeType": "{{2.ContentType}}",
+        "overwrite": false
+      }
+    }
+  ],
+  "connections": [
+    {"from": 1, "to": 2},
+    {"from": 2, "to": 3}
+  ],
+  "notes": "Replace YOUR_GOOGLE_DRIVE_FOLDER_ID with your actual folder ID from the Google Drive URL."
+}

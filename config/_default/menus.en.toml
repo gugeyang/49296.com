@@ -1,0 +1,26 @@
+[[main]]
+name = "Blueprints & Guides"
+url = "blog/"
+weight = 1
+  
+[[main]]
+name = "About Us"
+url = "about/"
+weight = 2
+
+[[main]]
+name = "Contact"
+url = "contact/"
+weight = 3
+
+[[footer]]
+name = "Blueprints"
+url = "blog/"
+
+[[footer]]
+name = "About Us"
+url = "about/"
+
+[[footer]]
+name = "Privacy Policy"
+url = "privacy-policy/"

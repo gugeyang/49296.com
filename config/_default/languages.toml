@@ -1,0 +1,9 @@
+[en]
+languageName = "En"
+languageCode = "en-us"
+contentDir = "content/english"
+weight = 1
+
+[en.params]
+home = "Home"
+copyright = "Copyright &copy; 2026 49296.com. All Rights Reserved. Mastering AI Workflows & Automation."

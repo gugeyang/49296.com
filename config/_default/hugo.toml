@@ -1,0 +1,13 @@
+######################## default configuration ####################
+baseURL = "https://49296.com/"
+title = "49296.com | AI Productivity & Automation Hub"
+theme = "ai-tech-theme"
+timeZone = "Asia/Shanghai"
+pagination.pagerSize = 6
+summaryLength = 15
+googleAnalytics = "G-TR54E8087D"
+disableLanguages = ["fr"]
+hasCJKLanguage = false
+
+[services.disqus]
+shortname = ''

@@ -1,0 +1,19 @@
+{{ define "main" }}
+<div class="container" style="padding-top: 4rem;">
+  <h1 class="section-title">{{ .Title }}</h1>
+  <p style="text-align: center; color: var(--text-secondary); margin-bottom: 4rem;">Browse our collection of automation workflows, AI prompts, and integration blueprints.</p>
+  
+  <div class="grid">
+    {{ range .Pages }}
+    <div class="card">
+      <h3 style="margin-bottom: 1rem;"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+      <div style="font-size: 0.85rem; color: var(--accent); margin-bottom: 1rem;">
+        {{ range .Params.categories }}<span>{{ . }}</span>{{ end }}
+      </div>
+      <p style="margin-bottom: 1.5rem;">{{ .Description | truncate 150 }}</p>
+      <a href="{{ .RelPermalink }}" style="font-weight: 600;">Read More &rarr;</a>
+    </div>
+    {{ end }}
+  </div>
+</div>
+{{ end }}

@@ -1,0 +1,114 @@
+{
+  "name": "Notion Database to Webflow CMS Sync",
+  "version": "1.0",
+  "platform": "Make.com",
+  "description": "Automatically syncs Notion database items to Webflow CMS collection items. Handles rich text to HTML conversion, image transfer, and upsert logic.",
+  "modules": [
+    {
+      "id": 1,
+      "type": "notion:WatchDatabaseItems",
+      "label": "Watch Notion Database for New/Updated Items",
+      "config": {
+        "databaseId": "YOUR_NOTION_DATABASE_ID",
+        "watchEvents": ["new", "updated"],
+        "limit": 10,
+        "filter": {
+          "property": "Status",
+          "select": {"equals": "Published"}
+        }
+      }
+    },
+    {
+      "id": 2,
+      "type": "notion:GetPageContent",
+      "label": "Get Full Page Content (Blocks)",
+      "config": {
+        "pageId": "{{1.page_id}}"
+      }
+    },
+    {
+      "id": 3,
+      "type": "tools:Iterator",
+      "label": "Iterate Content Blocks",
+      "config": {
+        "array": "{{2.results}}"
+      }
+    },
+    {
+      "id": 4,
+      "type": "tools:TextAggregator",
+      "label": "Convert Notion Blocks to HTML",
+      "config": {
+        "sourceModule": 3,
+        "separator": "",
+        "text": "{{if(3.type = 'paragraph', concat('<p>', 3.paragraph.rich_text[].plain_text, '</p>'), if(3.type = 'heading_1', concat('<h1>', 3.heading_1.rich_text[].plain_text, '</h1>'), if(3.type = 'heading_2', concat('<h2>', 3.heading_2.rich_text[].plain_text, '</h2>'), if(3.type = 'image', concat('<img src=\"', 3.image.file.url, '\">'), ''))))}}"
+      }
+    },
+    {
+      "id": 5,
+      "type": "webflow:SearchItems",
+      "label": "Check if Item Already Exists in Webflow",
+      "config": {
+        "collectionId": "YOUR_WEBFLOW_COLLECTION_ID",
+        "query": {
+          "field": "notion-page-id",
+          "value": "{{1.page_id}}"
+        }
+      }
+    },
+    {
+      "id": 6,
+      "type": "router",
+      "label": "Route: Create or Update",
+      "routes": [
+        {
+          "filter": "{{5.totalItems = 0}}",
+          "target": 7,
+          "label": "New Item"
+        },
+        {
+          "filter": "{{5.totalItems > 0}}",
+          "target": 8,
+          "label": "Existing Item"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "type": "webflow:CreateLiveItem",
+      "label": "Create New Webflow CMS Item",
+      "config": {
+        "collectionId": "YOUR_WEBFLOW_COLLECTION_ID",
+        "fields": {
+          "name": "{{1.properties.Name.title[0].plain_text}}",
+          "slug": "{{lower(replace(1.properties.Name.title[0].plain_text, ' ', '-'))}}",
+          "main-content": "{{4.Text}}",
+          "notion-page-id": "{{1.page_id}}",
+          "archived": false,
+          "draft": false
+        }
+      }
+    },
+    {
+      "id": 8,
+      "type": "webflow:UpdateLiveItem",
+      "label": "Update Existing Webflow CMS Item",
+      "config": {
+        "collectionId": "YOUR_WEBFLOW_COLLECTION_ID",
+        "itemId": "{{5.items[0]._id}}",
+        "fields": {
+          "name": "{{1.properties.Name.title[0].plain_text}}",
+          "main-content": "{{4.Text}}"
+        }
+      }
+    }
+  ],
+  "connections": [
+    {"from": 1, "to": 2},
+    {"from": 2, "to": 3},
+    {"from": 3, "to": 4},
+    {"from": 4, "to": 5},
+    {"from": 5, "to": 6}
+  ],
+  "notes": "Replace YOUR_NOTION_DATABASE_ID and YOUR_WEBFLOW_COLLECTION_ID with your actual IDs. Add a custom 'notion-page-id' plain text field to your Webflow CMS collection for upsert logic."
+}

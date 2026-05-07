@@ -1,0 +1,44 @@
+{{ define "main" }}
+<main class="container post-layout">
+  <article>
+    <header class="post-header">
+      <div style="margin-bottom: 1rem;">
+        <a href="{{ "blog/" | relURL }}" style="font-family: var(--font-mono); font-size: 0.9rem;">&larr; Back to Blueprints</a>
+      </div>
+      <h1>{{ .Title }}</h1>
+      <div class="post-meta">
+        <span>Published: {{ .Date.Format "Jan 02, 2006" }}</span>
+        <span>Author: {{ .Params.author | default "Architecture Team" }}</span>
+        <span>Category: {{ index .Params.categories 0 }}</span>
+      </div>
+    </header>
+
+    {{ if .Params.image }}
+    <div class="post-featured-image" style="margin: 2rem 0;">
+      <img src="{{ .Params.image | relURL }}" alt="{{ .Title }}" style="max-width: 100%; height: auto; border-radius: 8px; border: 1px solid var(--c-border, #2a2a3e); box-shadow: 0 4px 20px rgba(0,0,0,0.3);">
+    </div>
+    {{ end }}
+
+    <!-- Content payload with AdSense injection -->
+    <div class="post-content">
+      {{ $adsense := partial "adsense-unit.html" . }}
+      {{ .Content | replaceRE "<!-- ADSENSE_INSERT_HERE -->" (string $adsense) | safeHTML }}
+    </div>
+  </article>
+
+  <!-- Desktop Sidebar -->
+  <aside class="sidebar">
+    <h3>About 49296.com</h3>
+    <p style="color: var(--c-text-secondary); font-size: 0.95rem; margin-bottom: 1.5rem;">We document the exact API configurations, webhooks, and JSON payloads required to build scalable AI workflows.</p>
+    
+    <h3 style="margin-top: 2rem;">Tech Stack Covered</h3>
+    <ul style="list-style: none; font-family: var(--font-mono); font-size: 0.85rem; color: var(--c-brand-cyan); line-height: 2;">
+      <li>> Make.com (Integromat)</li>
+      <li>> Zapier Webhooks</li>
+      <li>> OpenAI / Claude APIs</li>
+      <li>> Notion Databases</li>
+      <li>> Webflow CMS REST</li>
+    </ul>
+  </aside>
+</main>
+{{ end }}

@@ -1,0 +1,63 @@
+{{ define "main" }}
+<main class="container">
+  
+  <!-- SEO Hero Section -->
+  <section class="hero">
+    <div class="hero-pill">System Architecture for Operations</div>
+    <h1>Build <span class="highlight">AI-Powered</span> Workflows & Automations.</h1>
+    <p>We engineer ready-to-deploy JSON blueprints and provide technical API documentation to help agencies and developers automate Make.com, Zapier, and LLMs.</p>
+    <a href="{{ "blog/" | relURL }}" class="btn-primary">
+      <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+      Browse Blueprint Library
+    </a>
+
+    <!-- CSS Art: Workflow Node Representation -->
+    <div class="workflow-visual">
+      <div class="wf-node">
+        <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+        <span>Webhook Trigger</span>
+      </div>
+      <div class="wf-arrow">→</div>
+      <div class="wf-node active">
+        <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path></svg>
+        <span>Parse JSON / OpenAI</span>
+      </div>
+      <div class="wf-arrow">→</div>
+      <div class="wf-node">
+        <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4"></path></svg>
+        <span>Notion CRM DB</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Dynamic Content Grid -->
+  <section style="margin-top: 2rem;">
+    <div class="section-header">
+      <h2>Latest Engineering Blueprints</h2>
+      <a href="{{ "blog/" | relURL }}">View Documentation Archive &rarr;</a>
+    </div>
+    
+    <div class="grid">
+      <!-- We pull the latest blog posts dynamically -->
+      {{ range first 6 (where site.RegularPages "Type" "post") }}
+      <article class="card">
+        <span class="card-meta">
+          {{ .Date.Format "2006.01.02" }} // {{ index .Params.categories 0 }}
+        </span>
+        <h3><a href="{{ .RelPermalink }}" style="color: inherit;">{{ .Title }}</a></h3>
+        <p>{{ .Description | truncate 130 }}</p>
+        <a href="{{ .RelPermalink }}" class="card-link">Access Blueprint &rarr;</a>
+      </article>
+      {{ end }}
+    </div>
+  </section>
+
+  <!-- Deep SEO Semantic Block -->
+  <section class="seo-block">
+    <h2>The Technical Knowledge Base for Automation Architects</h2>
+    <p>49296.com is a practitioner-led technical repository focusing on the programmatic connection of SaaS applications. While AI chatbots can generate basic scripts, building resilient, error-handling workflows across distributed APIs (like connecting OpenAI endpoints to Make.com routers or managing Zapier polling limits) requires documented, real-world engineering experience.</p>
+    <p>We provide our readers—operations managers, automation agencies, and full-stack developers—with <strong>downloadable blueprint assets (.json)</strong> and meticulous UI configuration guides. By treating no-code platforms as visual programming environments, we ensure your data pipelines remain stable under production loads.</p>
+  </section>
+
+</main>
+{{ end }}

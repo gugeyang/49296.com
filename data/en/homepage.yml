@@ -1,0 +1,96 @@
+################################# Slider #####################################
+slider:
+  enable : true
+  bg_image : "images/banner/banner-1.jpg"
+  slider_item:
+    - title : "49296.com — The AI Productivity & Automation Hub"
+      content : "Stop doing manual work. Download our free Make.com blueprints, Notion templates, and proven Zapier workflows to automate your business."
+      animation_in : "left"
+      animation_out : "right"
+      button:
+        enable : true
+        label : "Explore Blueprints"
+        link : "blog/"
+
+    - title : "AI-Proof Workflows That Actually Work"
+      content : "Step-by-step visual guides showing you exactly how to connect AI APIs to your CRM, Calendar, and email. No fluff, just real ROI."
+      animation_in : "left"
+      animation_out : "right"
+      button:
+        enable : true
+        label : "Learn More"
+        link : "about/"
+
+############################### Banner feature ###############################
+banner_feature:
+  enable : true
+  image : "images/banner/banner-feature.png"
+  feature_item:
+    - name : "Ready-to-Use Blueprints"
+      icon : "ti-download"
+      content : "Download and import JSON Make.com scenarios in seconds."
+
+    - name : "Step-by-Step UI Guides"
+      icon : "ti-desktop"
+      content : "Visual walkthroughs with screenshots for every API setting."
+
+    - name : "Real-World Automations"
+      icon : "ti-settings"
+      content : "Niche workflows for real estate, e-commerce, and agencies."
+
+    - name : "Deep ROI Analysis"
+      icon : "ti-stats-up"
+      content : "Honest cost comparisons between tools like Zapier and Make.com."
+
+############################## about ##################################
+about:
+  enable : true
+  title : "About 49296.com"
+  image : "images/about/about-us.jpg"
+  content : "49296.com is a dedicated knowledge base for AI productivity and No-Code automation. We provide ready-to-deploy blueprints and deep visual guides to help you scale your operations without writing code.\n\nWe empower professionals to eliminate manual data entry and build resilient digital workflows."
+  button:
+    enable : true
+    label : "Read More"
+    link : "about/"
+
+############################# Course ################################
+course:
+  enable : false
+  title : "Automation Blueprints"
+
+########################## Call to action ############################
+cta:
+  enable : true
+  subtitle : "Automate your workflows today"
+  title : "Get our free Make.com and Zapier blueprints"
+  button:
+    enable : true
+    label : "View Blueprints"
+    link : "blog/"
+
+######################## Success story #############################
+success_story:
+  enable : false
+
+############################# event ################################
+event:
+  enable : false
+  title : "Upcoming Events"
+
+########################### funfacts ############################
+funfacts:
+  enable : true
+  funfact_item:
+    - name : "YEARS EXPERIENCE"
+      count : "10"
+    - name : "DEPLOYMENTS"
+      count : "50"
+    - name : "ARTICLES"
+      count : "20"
+    - name : "OPEN SOURCE PROJECTS"
+      count : "5"
+
+############################# blog ################################
+blog:
+  enable : true
+  title : "Latest Dev Logs"

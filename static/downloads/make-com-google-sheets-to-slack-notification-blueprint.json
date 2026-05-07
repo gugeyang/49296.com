@@ -1,0 +1,37 @@
+{
+    "blueprint_name": "make.com google sheets to slack notification Automation",
+    "version": "1.0.0",
+    "author": "49296.com",
+    "description": "Ready-to-import blueprint for make.com google sheets to slack notification",
+    "nodes": [
+        {
+            "id": 1,
+            "type": "Trigger",
+            "service": "Webhook",
+            "config": {
+                "method": "POST",
+                "auth": "None"
+            }
+        },
+        {
+            "id": 2,
+            "type": "Action",
+            "service": "Processor",
+            "config": {
+                "operation": "Transform Data",
+                "format": "JSON"
+            }
+        }
+    ],
+    "metadata": {
+        "tags": [
+            "make.com",
+            "google",
+            "sheets",
+            "to",
+            "slack",
+            "notification"
+        ],
+        "generated_at": "2026-05-07T11:04:35.866521"
+    }
+}

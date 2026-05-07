@@ -1,0 +1,21 @@
+{{/*
+  AdSense In-Article Ad Unit Partial
+  使用方法：在文章模板中通过 replaceRE 或 hugo pipe 替换 <!-- ADSENSE_INSERT_HERE --> 标记。
+  申请通过 AdSense 后，将下方 ca-pub-XXXXXXXXXXXXXXXX 替换为你的真实 Publisher ID，
+  并将 data-ad-slot 替换为真实的广告单元 ID。
+*/}}
+<div class="adsense-container" style="margin: 2rem 0; padding: 1.5rem 0; border-top: 1px solid var(--c-border, #2a2a3e); border-bottom: 1px solid var(--c-border, #2a2a3e); text-align: center;">
+  <!-- AdSense 广告位 (申请通过后取消注释) -->
+  <!--
+  <ins class="adsbygoogle"
+       style="display:block; text-align:center;"
+       data-ad-layout="in-article"
+       data-ad-format="fluid"
+       data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+       data-ad-slot="XXXXXXXXXX"></ins>
+  <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+  -->
+  <p style="font-size: 0.75rem; color: var(--c-text-secondary, #888); letter-spacing: 0.05em;">SPONSORED</p>
+</div>
