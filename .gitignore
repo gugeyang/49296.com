@@ -21,3 +21,5 @@ Thumbs.db
 # 仅忽略根目录下的 Markdown 文档和 Python 脚本，以确保 content/ 里的文章能正常上传
 /*.md
 /*.py
+.env
+
