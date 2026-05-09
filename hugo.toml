@@ -21,7 +21,7 @@ email = "admin@49296.com"
 # contact form action
 contact_form_action = "#" # contact form works with https://formspree.io
 # Google Analytics
-  google_analytics_id = "G-MBS8YFS3BN" # GA4 Measurement ID
+  google_analytics_id = "G-47G984HYTJ" # GA4 Measurement ID
 # top header
 top_header = true
 
