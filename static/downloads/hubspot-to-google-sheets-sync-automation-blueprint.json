@@ -1,0 +1,37 @@
+{
+    "blueprint_name": "hubspot to google sheets sync automation Automation",
+    "version": "1.0.0",
+    "author": "49296.com",
+    "description": "Ready-to-import blueprint for hubspot to google sheets sync automation",
+    "nodes": [
+        {
+            "id": 1,
+            "type": "Trigger",
+            "service": "Webhook",
+            "config": {
+                "method": "POST",
+                "auth": "None"
+            }
+        },
+        {
+            "id": 2,
+            "type": "Action",
+            "service": "Processor",
+            "config": {
+                "operation": "Transform Data",
+                "format": "JSON"
+            }
+        }
+    ],
+    "metadata": {
+        "tags": [
+            "hubspot",
+            "to",
+            "google",
+            "sheets",
+            "sync",
+            "automation"
+        ],
+        "generated_at": "2026-05-11T00:04:22.903256"
+    }
+}

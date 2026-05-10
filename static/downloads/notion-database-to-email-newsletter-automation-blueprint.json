@@ -1,0 +1,37 @@
+{
+    "blueprint_name": "notion database to email newsletter automation Automation",
+    "version": "1.0.0",
+    "author": "49296.com",
+    "description": "Ready-to-import blueprint for notion database to email newsletter automation",
+    "nodes": [
+        {
+            "id": 1,
+            "type": "Trigger",
+            "service": "Webhook",
+            "config": {
+                "method": "POST",
+                "auth": "None"
+            }
+        },
+        {
+            "id": 2,
+            "type": "Action",
+            "service": "Processor",
+            "config": {
+                "operation": "Transform Data",
+                "format": "JSON"
+            }
+        }
+    ],
+    "metadata": {
+        "tags": [
+            "notion",
+            "database",
+            "to",
+            "email",
+            "newsletter",
+            "automation"
+        ],
+        "generated_at": "2026-05-11T00:00:44.460306"
+    }
+}
