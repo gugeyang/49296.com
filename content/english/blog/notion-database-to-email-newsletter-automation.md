@@ -1,6 +1,6 @@
 ---
 title: "Notion Database To Email Newsletter Automation — Production-Ready Workflow + Free JSON Download"
-date: 2026-05-11T00:00:23+08:00
+date: 2026-05-06T00:08:52+08:00
 image: "images/blog/notion-database-to-email-newsletter-automation.jpg"
 author: "Automation Architect"
 type: "post"

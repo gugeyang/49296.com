@@ -1,6 +1,6 @@
 ---
 title: "Free Notion Crm Template For Freelancers — Production-Ready Workflow + Free JSON Download"
-date: 2026-05-11T00:01:16+08:00
+date: 2026-04-27T00:08:52+08:00
 image: "images/blog/free-notion-crm-template-for-freelancers.jpg"
 author: "Automation Architect"
 type: "post"

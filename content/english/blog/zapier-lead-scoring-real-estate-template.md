@@ -1,6 +1,6 @@
 ---
 title: "Zapier Lead Scoring Real Estate Template — Production-Ready Workflow + Free JSON Download"
-date: 2026-05-10T23:56:59+08:00
+date: 2026-05-09T00:08:52+08:00
 image: "images/blog/zapier-lead-scoring-real-estate-template.jpg"
 author: "Automation Architect"
 type: "post"

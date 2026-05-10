@@ -1,6 +1,6 @@
 ---
 title: "Free Airtable To Google Calendar Sync Automation Blueprint: Download & Deploy in Minutes (2026)"
-date: 2026-05-10T23:57:56+08:00
+date: 2026-04-26T00:08:52+08:00
 image: "images/blog/airtable-to-google-calendar-sync-automation.jpg"
 author: "Automation Architect"
 type: "post"

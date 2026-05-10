@@ -1,6 +1,6 @@
 ---
 title: "How to Set Up Midjourney Prompt Generator Notion Template Without Code (2026 Guide)"
-date: 2026-05-10T23:57:27+08:00
+date: 2026-05-04T00:08:52+08:00
 image: "images/blog/midjourney-prompt-generator-notion-template.jpg"
 author: "Automation Architect"
 type: "post"

@@ -1,6 +1,6 @@
 ---
 title: "Free Zapier Google Form To Airtable Automation Blueprint: Download & Deploy in Minutes (2026)"
-date: 2026-05-11T00:01:44+08:00
+date: 2026-05-08T00:08:52+08:00
 image: "images/blog/zapier-google-form-to-airtable-automation.jpg"
 author: "Automation Architect"
 type: "post"

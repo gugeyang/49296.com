@@ -1,6 +1,6 @@
 ---
 title: "How to Set Up Make.Com Openai Api Integration Tutorial Without Code (2026 Guide)"
-date: 2026-05-11T00:00:49+08:00
+date: 2026-04-30T00:08:52+08:00
 image: "images/blog/make-com-openai-api-integration-tutorial.jpg"
 author: "Automation Architect"
 type: "post"

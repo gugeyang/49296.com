@@ -1,6 +1,6 @@
 ---
 title: "Free Make.Com Shopify Order To Google Sheets Blueprint: Download & Deploy in Minutes (2026)"
-date: 2026-05-10T23:59:26+08:00
+date: 2026-05-02T00:08:52+08:00
 image: "images/blog/make-com-shopify-order-to-google-sheets.jpg"
 author: "Automation Architect"
 type: "post"

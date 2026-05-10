@@ -1,6 +1,6 @@
 ---
 title: "Zapier Slack To Trello Card Automation — Complete Step-by-Step Guide (2026)"
-date: 2026-05-10T23:58:57+08:00
+date: 2026-05-10T00:08:52+08:00
 image: "images/blog/zapier-slack-to-trello-card-automation.jpg"
 author: "Automation Architect"
 type: "post"

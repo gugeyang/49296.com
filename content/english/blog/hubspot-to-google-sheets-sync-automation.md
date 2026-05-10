@@ -1,6 +1,6 @@
 ---
 title: "Hubspot To Google Sheets Sync Automation: The No-Code Automation Playbook (2026)"
-date: 2026-05-11T00:03:57+08:00
+date: 2026-04-28T00:08:52+08:00
 image: "images/blog/hubspot-to-google-sheets-sync-automation.jpg"
 author: "Automation Architect"
 type: "post"

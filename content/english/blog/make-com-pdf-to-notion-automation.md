@@ -1,6 +1,6 @@
 ---
 title: "Make.Com Pdf To Notion Automation — Complete Step-by-Step Guide (2026)"
-date: 2026-05-11T00:03:32+08:00
+date: 2026-05-01T00:08:52+08:00
 image: "images/blog/make-com-pdf-to-notion-automation.jpg"
 author: "Automation Architect"
 type: "post"
