@@ -1,0 +1,35 @@
+{
+    "blueprint_name": "make com airtable integration Automation",
+    "version": "1.0.0",
+    "author": "49296.com",
+    "description": "Ready-to-import blueprint for make com airtable integration",
+    "nodes": [
+        {
+            "id": 1,
+            "type": "Trigger",
+            "service": "Webhook",
+            "config": {
+                "method": "POST",
+                "auth": "None"
+            }
+        },
+        {
+            "id": 2,
+            "type": "Action",
+            "service": "Processor",
+            "config": {
+                "operation": "Transform Data",
+                "format": "JSON"
+            }
+        }
+    ],
+    "metadata": {
+        "tags": [
+            "make",
+            "com",
+            "airtable",
+            "integration"
+        ],
+        "generated_at": "2026-06-02T22:03:39.963643"
+    }
+}
