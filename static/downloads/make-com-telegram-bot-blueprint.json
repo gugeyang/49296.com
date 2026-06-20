@@ -1,0 +1,34 @@
+{
+    "blueprint_name": "make.com telegram bot Automation",
+    "version": "1.0.0",
+    "author": "49296.com",
+    "description": "Ready-to-import blueprint for make.com telegram bot",
+    "nodes": [
+        {
+            "id": 1,
+            "type": "Trigger",
+            "service": "Webhook",
+            "config": {
+                "method": "POST",
+                "auth": "None"
+            }
+        },
+        {
+            "id": 2,
+            "type": "Action",
+            "service": "Processor",
+            "config": {
+                "operation": "Transform Data",
+                "format": "JSON"
+            }
+        }
+    ],
+    "metadata": {
+        "tags": [
+            "make.com",
+            "telegram",
+            "bot"
+        ],
+        "generated_at": "2026-06-20T11:58:41.987714"
+    }
+}
