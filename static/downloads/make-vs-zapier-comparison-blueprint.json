@@ -1,0 +1,35 @@
+{
+    "blueprint_name": "make vs zapier comparison Automation",
+    "version": "1.0.0",
+    "author": "49296.com",
+    "description": "Ready-to-import blueprint for make vs zapier comparison",
+    "nodes": [
+        {
+            "id": 1,
+            "type": "Trigger",
+            "service": "Webhook",
+            "config": {
+                "method": "POST",
+                "auth": "None"
+            }
+        },
+        {
+            "id": 2,
+            "type": "Action",
+            "service": "Processor",
+            "config": {
+                "operation": "Transform Data",
+                "format": "JSON"
+            }
+        }
+    ],
+    "metadata": {
+        "tags": [
+            "make",
+            "vs",
+            "zapier",
+            "comparison"
+        ],
+        "generated_at": "2026-07-05T11:13:58.468382"
+    }
+}
